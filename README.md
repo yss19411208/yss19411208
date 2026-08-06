@@ -44,8 +44,8 @@ Real-time data pipelines are what I enjoy most: pulling live signals (X posts, Y
 
 <div align="center">
 
-<img height="165em" src="https://github-readme-stats.vercel.app/api?username=yss19411208&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=7FD6FF&icon_color=7FD6FF&text_color=c9d1d9&count_private=true"/>
-<img height="165em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=yss19411208&layout=compact&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=7FD6FF&text_color=c9d1d9&langs_count=8"/>
+<img height="165em" src="./profile/stats.svg" alt="GitHub Stats"/>
+<img height="165em" src="./profile/top-langs.svg" alt="Top Languages"/>
 
 <img src="https://streak-stats.demolab.com?user=yss19411208&theme=tokyonight&hide_border=true&background=0d1117&ring=7FD6FF&fire=ff7b72&currStreakLabel=7FD6FF" alt="GitHub Streak"/>
 
@@ -58,6 +58,8 @@ Real-time data pipelines are what I enjoy most: pulling live signals (X posts, Y
 <div align="center">
 
 <img src="https://github-profile-trophy.vercel.app/?username=yss19411208&theme=tokyonight&no-frame=true&row=1&column=7&margin-w=8&margin-h=8" />
+
+<sub>公開Vercelインスタンスのレート制限により、まれに一時的に表示が崩れることがあります(既知の問題)。表示されない場合はページを再読み込みしてください。</sub>
 
 </div>
 
@@ -78,12 +80,12 @@ Real-time data pipelines are what I enjoy most: pulling live signals (X posts, Y
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/yss19411208/yss19411208/output/github-contribution-grid-snake-dark.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/yss19411208/yss19411208/output/github-contribution-grid-snake.svg" />
-  <img alt="github contribution snake" src="https://raw.githubusercontent.com/yss19411208/yss19411208/output/github-contribution-grid-snake.svg" />
+  <source media="(prefers-color-scheme: dark)" srcset="./profile/github-contribution-grid-snake-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="./profile/github-contribution-grid-snake.svg" />
+  <img alt="github contribution snake" src="./profile/github-contribution-grid-snake.svg" />
 </picture>
 
-<sub>このセクションは下記のGitHub Actionsワークフローを設定して初めて表示されます(手順は本文参照)。</sub>
+<sub>このセクションは下記の`update-profile.yml`ワークフローを設定して初めて表示されます(手順は本文参照)。</sub>
 
 </div>
 
