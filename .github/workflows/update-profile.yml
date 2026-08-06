@@ -12,6 +12,13 @@ on:
 permissions:
   contents: write         # 生成したSVGをリポジトリへコミットするために必要
 
+# 同じワークフローの実行が重なった場合、後から始まった方を待たせる。
+# (schedule / workflow_dispatch / push の3トリガーがあるため、
+#  手動実行とpushがほぼ同時に起きるとpush競合が発生しうる)
+concurrency:
+  group: update-profile-${{ github.ref }}
+  cancel-in-progress: false
+
 jobs:
   update-cards:
     runs-on: ubuntu-latest
@@ -59,4 +66,10 @@ jobs:
           git add profile/*.svg
           # 変更が無い場合は git commit がエラーで終了するため || exit 0 で握りつぶす
           git commit -m "chore: update profile cards" || exit 0
+
+          # push直前に最新のリモート状態を取り込んでから積み直す。
+          # 対象は生成し直せば同じ結果になる使い捨てのSVGファイルのみなので、
+          # rebaseで安全に解決できる想定。
+          git pull --rebase origin main
+
           git push
