@@ -39,7 +39,10 @@ jobs:
           card: stats
           options: 'username=${{ github.repository_owner }}&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=7FD6FF&icon_color=7FD6FF&text_color=c9d1d9'
           path: profile/stats.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
+          # GITHUB_TOKEN はこのリポジトリへの読み書き専用で、read:user のような
+          # アカウント全体のコントリビューションデータを読むスコープを持たないため、
+          # read:user スコープ付きの個人アクセストークン(Settings > Secrets に STATS_PAT として登録)を使う。
+          token: ${{ secrets.STATS_PAT }}
 
       - name: Generate top languages card
         uses: readme-tools/github-readme-stats-action@v1
@@ -47,7 +50,7 @@ jobs:
           card: top-langs
           options: 'username=${{ github.repository_owner }}&layout=compact&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=7FD6FF&text_color=c9d1d9&langs_count=8'
           path: profile/top-langs.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.STATS_PAT }}
 
       # ---- コントリビューションスネークを生成 ----
       - name: Generate snake animation
